@@ -1,0 +1,24 @@
+{
+  "name": "landing-enel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@dnssd",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "tar": "^5.0.5"
+  },
+  "devDependencies": {
+    "jquery": "^3.4.1"
+  }
+}

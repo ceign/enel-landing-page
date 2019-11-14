@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #MAIN SASS
+\*------------------------------------*/
+
+/**
+ * En el documento se importan todos los archivos
+   de estilo del sitio.
+   Se jerarquizan directorios en base a la arquitectura
+   ITCSS.
+ */
+
+//Settings
+@import './Settings/variables';
+@import './Settings/fuentes';
+
+//Tools
+@import './Tools/mixins';
+@import './Tools/media-queries';
+
+//Generic
+@import './Generic/normalize';
+
+//Elements
+@import './Elements/elementos';
+
+:root {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+//Components
+@import './Components/Hero/foo';
+
+//Utilities
+@import './Utilities/god-tier';
