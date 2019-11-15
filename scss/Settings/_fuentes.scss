@@ -4,13 +4,14 @@
 
 /**
  * Fuentes definidas para:
-    1. navegación
-    2. títulos
-    3. parrafos
+    1. títulos
+    2. textos
  */
 
 //Se definen variables desde Google Fonts.
 
-//1, 2, 3
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
-$font: 'Montserrat', sans-serif;
+//1, 2, 
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Quicksand:400,500,700&display=swap');
+
+$titulo: 'Cabin', sans-serif;
+$texto: 'Quicksand', sans-serif;
