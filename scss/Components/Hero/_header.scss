@@ -1,0 +1,18 @@
+header {
+    grid-area: header;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+
+    .header {
+        width: 100%;
+
+        .c-logo {
+            width: 70%;
+        }
+
+        .c-button-download {
+            width: 100%;
+        }
+    }
+}
