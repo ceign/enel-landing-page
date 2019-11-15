@@ -47,7 +47,7 @@
 }
 
 //5. rebeccapurple es el color por default
-@mixin borde ($px, $c:rebeccapurple) {
+@mixin border ($px, $c:rebeccapurple) {
   border-width: $px;
   border-style: solid;
   border-color: $c;
