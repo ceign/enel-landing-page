@@ -15,7 +15,7 @@ gulp.task('sass', async function () {
         browsers: ['last 10 versions'],
         cascade: true
     }))
-    .pipe(gulp.dest('app/css/'))
+    .pipe(gulp.dest('app/css/dist/'))
     .pipe(browserSync.stream());
 });
 
@@ -27,7 +27,7 @@ gulp.task('compress', async function (){
 
 gulp.task('autoprefix', async function (){
     gulp.src('scss/**/.scss')
-    .pipe(gulp.dest('app/css/'))
+    .pipe(gulp.dest('app/css/dist/'))
 });
 
 gulp.task('serve', gulp.series('sass', async function (){
