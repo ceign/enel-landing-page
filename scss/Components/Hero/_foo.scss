@@ -6,6 +6,7 @@
         @include transition(.3s all ease-in-out);
         font-family: $font;
         font-size: 2rem;
+        display: flex;
 
         &:hover {
             color: red;

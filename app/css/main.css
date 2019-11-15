@@ -424,7 +424,11 @@ a {
     -o-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem; }
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
     .foo-wrapper .foo:hover {
       color: red; }
   .foo-wrapper p {

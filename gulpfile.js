@@ -6,11 +6,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 
 
-
-gulp.task('default', async function(){
-    console.log('GULP ITS WORK!')
-});
-
 gulp.task('sass', async function () {
     return gulp.src('scss/*.scss')
 
