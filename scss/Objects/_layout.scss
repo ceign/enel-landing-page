@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * En el documento se trabaja el layout completo del
+   proyecto, generando así la estructura del sitio.
+   Si se deben modificar estilos de elementos, se 
+   deberán realizar en el documento .scss del elemento
+   al cual se desea modificar.
+ */
+
+div.full-wrapper {
+    width: 100%;
+    min-width: 250px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+        "header header header header"
+        "home-info home-info home-info home-info"
+        "cta cta cta cta";
+
+
+
+    /**
+ * A continuación se trabaja la estructura para las
+    diferentes secciones del sitio.
+*/
+
+    //Header
+
+    header {
+        display: grid;
+        grid-template-rows: auto;
+        grid-column: 1/-1;
+
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: left;
+            grid-gap: 1rem;
+        }
+    }
+
+    //Home Info
+
+    .home-info {
+        display: grid;
+        grid-column: 1/-1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    //Call to Action
+
+    .call-to-action {
+        display: grid;
+        grid-column: 1/-1;
+        align-content: center;
+        justify-content: center;
+    }
+}
