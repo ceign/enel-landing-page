@@ -24,12 +24,19 @@
 @import './Elements/elementos';
 
 :root {
-    box-sizing: border-box;
-    font-size: 16px;
+  font-size: 16px;
 }
 
+//Objects
+@import './Objects/layout';
+
 //Components
-@import './Components/Hero/foo';
+@import './Components/Global/c-logo';
+@import './Components/Global/c-button-download';
+@import './Components/Global/c-button-cta';
+@import './Components/Hero/header';
+@import './Components/Hero/home-info';
+@import './Components/Hero/call-to-action';
 
 //Utilities
 @import './Utilities/god-tier';
