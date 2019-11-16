@@ -1,0 +1,20 @@
+.c-button-learn-more {
+    @include border(2px, $pink);
+    width: 290px;
+    height: 64px;
+    border-radius: 4px;
+
+    a {
+        @include flex-align(row, center, center);
+        width: 100%;
+        height: 100%;
+
+        .c-button-learn-more__text {
+            font-family: $texto;
+            color: $pink;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+}
