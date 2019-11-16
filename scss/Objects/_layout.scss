@@ -20,7 +20,8 @@ div.full-wrapper {
     grid-template-areas:
         "header header header header"
         "home-info home-info home-info home-info"
-        "cta cta cta cta";
+        "cta cta cta cta"
+        "services services services services";
 
 
 
@@ -34,7 +35,6 @@ div.full-wrapper {
     header {
         display: grid;
         grid-template-rows: auto;
-        grid-column: 1/-1;
 
         .header {
             display: grid;
@@ -49,7 +49,6 @@ div.full-wrapper {
 
     .home-info {
         display: grid;
-        grid-column: 1/-1;
         align-items: center;
         justify-content: center;
     }
@@ -58,7 +57,6 @@ div.full-wrapper {
 
     .call-to-action {
         display: grid;
-        grid-column: 1/-1;
         align-content: center;
         justify-content: center;
     }

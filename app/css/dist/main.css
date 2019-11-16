@@ -414,15 +414,14 @@ div.full-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, auto);
-  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta";
+  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta" "services services services services";
   /**
  * A continuación se trabaja la estructura para las
     diferentes secciones del sitio.
 */ }
   div.full-wrapper header {
     display: grid;
-    grid-template-rows: auto;
-    grid-column: 1/-1; }
+    grid-template-rows: auto; }
     div.full-wrapper header .header {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -434,7 +433,6 @@ div.full-wrapper {
       grid-gap: 1rem; }
   div.full-wrapper .home-info {
     display: grid;
-    grid-column: 1/-1;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -445,7 +443,6 @@ div.full-wrapper {
             justify-content: center; }
   div.full-wrapper .call-to-action {
     display: grid;
-    grid-column: 1/-1;
     -webkit-align-content: center;
         -ms-flex-line-pack: center;
             align-content: center;
@@ -549,6 +546,88 @@ div.full-wrapper {
       font-size: 1.25rem;
       font-weight: 700; }
 
+.c-service-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem 1rem;
+  max-width: 80%;
+  border-radius: 20px; }
+  .c-service-card .c-service-card__ico {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #FFF;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px; }
+    .c-service-card .c-service-card__ico span {
+      color: #FFF;
+      font-size: 2.3rem; }
+  .c-service-card .c-service-card__text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .c-service-card .c-service-card__text h2 {
+      font-family: "Cabin", sans-serif;
+      margin: 2rem 0 1rem; }
+    .c-service-card .c-service-card__text p {
+      font-family: "Quicksand", sans-serif;
+      color: #666666;
+      max-width: 260px;
+      text-align: center;
+      line-height: 1.5rem;
+      font-weight: 500;
+      padding: 0 1.5rem; }
+  .c-service-card.c-service-card--user .c-service-card__ico {
+    background-color: #FFC420; }
+  .c-service-card.c-service-card--dollar .c-service-card__ico {
+    background-color: #41B9E6; }
+  .c-service-card.c-service-card--bell .c-service-card__ico {
+    background-color: #EA17DB; }
+
 header {
   grid-area: header;
   width: 100%;
@@ -592,7 +671,40 @@ div.home-info {
 
 div.call-to-action {
   grid-area: cta;
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  width: 100%;
+  height: auto; }
+
+div.services {
+  grid-area: services;
+  width: 100%;
+  height: auto; }
+  div.services .services__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 4rem 0; }
+    div.services .services__wrapper .c-service-card {
+      margin: 2rem 0; }
+      div.services .services__wrapper .c-service-card.c-service-card--shadow {
+        -webkit-box-shadow: 0px 0px 15px 2px #CCCCCC;
+                box-shadow: 0px 0px 15px 2px #CCCCCC; }
 
 /*------------------------------------*\
     #IMPORTANT RULES
