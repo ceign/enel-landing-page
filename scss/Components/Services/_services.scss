@@ -1,5 +1,4 @@
 div.services {
-    grid-area: services;
     width: 100%;
     height: auto;
 
@@ -7,7 +6,7 @@ div.services {
         @include flex-align(column, center, center);
         width: 100%;
         height: 100%;
-        padding: 4rem 0;
+        padding: 4rem 0 0;
 
         .c-service-card {
             margin: 2rem 0;
