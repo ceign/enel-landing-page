@@ -414,12 +414,13 @@ div.full-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, auto);
-  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta" "services services services services";
+  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta";
   /**
  * A continuación se trabaja la estructura para las
     diferentes secciones del sitio.
 */ }
   div.full-wrapper header {
+    grid-area: header;
     display: grid;
     grid-template-rows: auto; }
     div.full-wrapper header .header {
@@ -432,6 +433,7 @@ div.full-wrapper {
       justify-items: left;
       grid-gap: 1rem; }
   div.full-wrapper .home-info {
+    grid-area: home-info;
     display: grid;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -442,6 +444,7 @@ div.full-wrapper {
         -ms-flex-pack: center;
             justify-content: center; }
   div.full-wrapper .call-to-action {
+    grid-area: cta;
     display: grid;
     -webkit-align-content: center;
         -ms-flex-line-pack: center;
@@ -450,6 +453,12 @@ div.full-wrapper {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  div.full-wrapper div.services {
+    grid-area: services; }
+  div.full-wrapper .app-info {
+    grid-area: app-info; }
+  div.full-wrapper .alerta-enel {
+    grid-area: alerta; }
 
 .c-logo {
   width: 120px;
@@ -628,8 +637,41 @@ div.full-wrapper {
   .c-service-card.c-service-card--bell .c-service-card__ico {
     background-color: #EA17DB; }
 
+.c-button-learn-more {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FF0F64;
+  width: 290px;
+  height: 64px;
+  border-radius: 4px; }
+  .c-button-learn-more a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%; }
+    .c-button-learn-more a .c-button-learn-more__text {
+      font-family: "Quicksand", sans-serif;
+      color: #FF0F64;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0; }
+
 header {
-  grid-area: header;
   width: 100%;
   height: auto;
   padding: 2rem; }
@@ -641,7 +683,6 @@ header {
       width: 100%; }
 
 div.home-info {
-  grid-area: home-info;
   width: 100%;
   height: auto;
   min-height: 340px;
@@ -670,13 +711,11 @@ div.home-info {
       border-radius: 10px; }
 
 div.call-to-action {
-  grid-area: cta;
   padding: 2rem 0;
   width: 100%;
   height: auto; }
 
 div.services {
-  grid-area: services;
   width: 100%;
   height: auto; }
   div.services .services__wrapper {
@@ -699,12 +738,184 @@ div.services {
             justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 4rem 0; }
+    padding: 4rem 0 0; }
     div.services .services__wrapper .c-service-card {
       margin: 2rem 0; }
       div.services .services__wrapper .c-service-card.c-service-card--shadow {
         -webkit-box-shadow: 0px 0px 15px 2px #CCCCCC;
                 box-shadow: 0px 0px 15px 2px #CCCCCC; }
+
+div.app-info {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5rem; }
+  div.app-info .app-info__wrapper {
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    width: 100%;
+    height: 100%; }
+    div.app-info .app-info__wrapper .app-info__cellphone {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      div.app-info .app-info__wrapper .app-info__cellphone figure {
+        max-width: 280px;
+        margin: 0; }
+        div.app-info .app-info__wrapper .app-info__cellphone figure img {
+          display: block;
+          width: 100%; }
+    div.app-info .app-info__wrapper .app-info__text {
+      width: 100%;
+      height: auto;
+      padding: 4rem 2rem 1rem 3rem; }
+      div.app-info .app-info__wrapper .app-info__text .app-info__title {
+        color: #3D3D3D;
+        font-family: "Cabin", sans-serif;
+        position: relative;
+        max-width: 320px;
+        font-size: 2.125rem;
+        font-weight: 500;
+        line-height: 3rem;
+        margin: 0; }
+        div.app-info .app-info__wrapper .app-info__text .app-info__title::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: #FF0F64;
+          top: 5%;
+          left: -20px;
+          width: 6px;
+          height: 90%;
+          border-radius: 10px; }
+      div.app-info .app-info__wrapper .app-info__text p {
+        font-family: "Quicksand", sans-serif;
+        color: #666666;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin: 2rem 0; }
+    div.app-info .app-info__wrapper .app-info__button {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+
+div.alerta-enel {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5rem; }
+  div.alerta-enel .alerta-enel__wrapper {
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    width: 100%;
+    height: 100%; }
+    div.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      div.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure {
+        max-width: 280px;
+        margin: 0; }
+        div.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure img {
+          display: block;
+          width: 100%; }
+    div.alerta-enel .alerta-enel__wrapper .alerta-enel__text {
+      width: 100%;
+      height: auto;
+      padding: 4rem 2rem 1rem 3rem; }
+      div.alerta-enel .alerta-enel__wrapper .alerta-enel__text .alerta-enel__title {
+        color: #3D3D3D;
+        font-family: "Cabin", sans-serif;
+        position: relative;
+        max-width: 320px;
+        font-size: 2.125rem;
+        font-weight: 500;
+        line-height: 3rem;
+        margin: 0; }
+        div.alerta-enel .alerta-enel__wrapper .alerta-enel__text .alerta-enel__title::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: #FF0F64;
+          top: 5%;
+          left: -20px;
+          width: 6px;
+          height: 90%;
+          border-radius: 10px; }
+      div.alerta-enel .alerta-enel__wrapper .alerta-enel__text p {
+        font-family: "Quicksand", sans-serif;
+        color: #666666;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin: 2rem 0; }
+    div.alerta-enel .alerta-enel__wrapper .alerta-enel__button {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
 
 /*------------------------------------*\
     #IMPORTANT RULES

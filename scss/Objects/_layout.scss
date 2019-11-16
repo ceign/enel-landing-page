@@ -21,7 +21,9 @@ div.full-wrapper {
         "header header header header"
         "home-info home-info home-info home-info"
         "cta cta cta cta"
-        "services services services services";
+        "services services services services"
+        "app-info app-info app-info app-info"
+        "alerta alerta alerta alerta";
 
 
 
@@ -33,6 +35,7 @@ div.full-wrapper {
     //Header
 
     header {
+        grid-area: header;
         display: grid;
         grid-template-rows: auto;
 
@@ -48,6 +51,7 @@ div.full-wrapper {
     //Home Info
 
     .home-info {
+        grid-area: home-info;
         display: grid;
         align-items: center;
         justify-content: center;
@@ -56,8 +60,27 @@ div.full-wrapper {
     //Call to Action
 
     .call-to-action {
+        grid-area: cta;
         display: grid;
         align-content: center;
         justify-content: center;
+    }
+
+    //Servives
+
+    div.services {
+        grid-area: services;
+    }
+
+    //App Information
+
+    .app-info {
+        grid-area: app-info;
+    }
+
+    //Alerta Enel
+
+    .alerta-enel {
+        grid-area: alerta;
     }
 }
