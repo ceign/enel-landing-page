@@ -16,7 +16,7 @@ div.full-wrapper {
     height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(9, auto);
     grid-template-areas:
         "header header header header"
         "home-info home-info home-info home-info"
@@ -25,7 +25,8 @@ div.full-wrapper {
         "alerta alerta alerta alerta"
         "screens screens screens screens"
         "subscribe subscribe subscribe subscribe"
-        "cta cta cta cta";
+        "cta cta cta cta"
+        "footer footer footer footer";
 
 
 
@@ -90,6 +91,12 @@ div.full-wrapper {
 
     section.call-to-action {
         grid-area: cta;
+    }
+
+    //Footer 
+
+    footer.footer {
+        grid-area: footer;
     }
 
 }

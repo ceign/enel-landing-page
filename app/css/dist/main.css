@@ -413,8 +413,8 @@ div.full-wrapper {
   height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, auto);
-  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta" "screens screens screens screens" "subscribe subscribe subscribe subscribe" "cta cta cta cta";
+  grid-template-rows: repeat(9, auto);
+  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta" "screens screens screens screens" "subscribe subscribe subscribe subscribe" "cta cta cta cta" "footer footer footer footer";
   /**
  * A continuación se trabaja la estructura para las
     diferentes secciones del sitio.
@@ -446,6 +446,8 @@ div.full-wrapper {
     grid-area: subscribe; }
   div.full-wrapper section.call-to-action {
     grid-area: cta; }
+  div.full-wrapper footer.footer {
+    grid-area: footer; }
 
 .c-logo {
   width: 120px;
@@ -702,6 +704,25 @@ div.full-wrapper {
     border-radius: 4px;
     cursor: pointer; }
 
+.c-footer-list {
+  width: 100%;
+  height: auto; }
+  .c-footer-list h3 {
+    font-family: "Quicksand", sans-serif;
+    color: #FFF;
+    font-size: 1.25rem;
+    margin-bottom: 2rem; }
+  .c-footer-list ul {
+    list-style: none;
+    padding: 0; }
+    .c-footer-list ul li {
+      text-decoration: none;
+      margin: 1.3rem 0; }
+      .c-footer-list ul li a {
+        color: #FFF;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.125rem; }
+
 header {
   width: 100%;
   height: auto;
@@ -720,7 +741,7 @@ section.home-info {
     width: 100%;
     height: 100%; }
     section.home-info .home-info__wrapper .home-info__text {
-      padding: 2rem 3rem; }
+      padding: 3rem; }
       section.home-info .home-info__wrapper .home-info__text h1 {
         position: relative;
         color: #3D3D3D;
@@ -1095,6 +1116,47 @@ section.call-to-action {
   width: 100%;
   height: auto;
   padding: 6rem 0; }
+
+footer.footer {
+  background-color: #FF0F64;
+  width: 100%;
+  height: auto;
+  padding: 3rem 3rem 1rem; }
+  footer.footer .footer__wrapper {
+    width: 100%;
+    height: 100%; }
+    footer.footer .footer__wrapper .c-footer-list {
+      margin-bottom: 4rem; }
+    footer.footer .footer__wrapper .footer__logo {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      footer.footer .footer__wrapper .footer__logo img {
+        width: 100%;
+        max-width: 150px; }
+    footer.footer .footer__wrapper .footer__legal {
+      width: 100%;
+      height: auto; }
+      footer.footer .footer__wrapper .footer__legal p {
+        font-family: "Cabin", sans-serif;
+        color: #FFF;
+        font-size: 1rem;
+        text-align: center;
+        padding: 2rem 0 1rem; }
 
 /*------------------------------------*\
     #IMPORTANT RULES
