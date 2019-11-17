@@ -20,11 +20,12 @@ div.full-wrapper {
     grid-template-areas:
         "header header header header"
         "home-info home-info home-info home-info"
-        "cta cta cta cta"
         "services services services services"
         "app-info app-info app-info app-info"
         "alerta alerta alerta alerta"
-        "screens screens screens screens";
+        "screens screens screens screens"
+        "subscribe subscribe subscribe subscribe"
+        "cta cta cta cta";
 
 
 
@@ -51,43 +52,44 @@ div.full-wrapper {
 
     //Home Info
 
-    .home-info {
+    section.home-info {
         grid-area: home-info;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
-
-    //Call to Action
-
-    .call-to-action {
-        grid-area: cta;
-        display: grid;
-        align-content: center;
-        justify-content: center;
     }
 
     //Servives
 
-    div.services {
+    section.services {
         grid-area: services;
     }
 
     //App Information
 
-    .app-info {
+    section.app-info {
         grid-area: app-info;
     }
 
     //Alerta Enel
 
-    .alerta-enel {
+    section.alerta-enel {
         grid-area: alerta;
     }
 
     //Screens
 
-    .screens {
+    section.screens {
         grid-area: screens;
     }
+
+    //Subscribe
+
+    section.subscribe {
+        grid-area: subscribe;
+    }
+
+    //Call to Action Button
+
+    section.call-to-action {
+        grid-area: cta;
+    }
+
 }
