@@ -23,7 +23,8 @@ div.full-wrapper {
         "cta cta cta cta"
         "services services services services"
         "app-info app-info app-info app-info"
-        "alerta alerta alerta alerta";
+        "alerta alerta alerta alerta"
+        "screens screens screens screens";
 
 
 
@@ -82,5 +83,11 @@ div.full-wrapper {
 
     .alerta-enel {
         grid-area: alerta;
+    }
+
+    //Screens
+
+    .screens {
+        grid-area: screens;
     }
 }

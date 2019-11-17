@@ -414,7 +414,7 @@ div.full-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, auto);
-  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta";
+  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta" "screens screens screens screens";
   /**
  * A continuación se trabaja la estructura para las
     diferentes secciones del sitio.
@@ -459,6 +459,8 @@ div.full-wrapper {
     grid-area: app-info; }
   div.full-wrapper .alerta-enel {
     grid-area: alerta; }
+  div.full-wrapper .screens {
+    grid-area: screens; }
 
 .c-logo {
   width: 120px;
@@ -904,6 +906,70 @@ div.alerta-enel {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
+
+div.screens {
+  padding: 2rem 3rem; }
+  div.screens .screens__title h2 {
+    color: #3D3D3D;
+    font-family: "Cabin", sans-serif;
+    text-align: center;
+    max-width: 320px;
+    font-size: 2.125rem;
+    font-weight: 500;
+    line-height: 3rem;
+    margin: 0; }
+    div.screens .screens__title h2 span {
+      color: #41B9E6;
+      font-size: 2.625rem; }
+  div.screens .screens__images {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    div.screens .screens__images figure {
+      position: relative;
+      margin: 0;
+      max-width: 280px; }
+      div.screens .screens__images figure img {
+        display: block;
+        width: 100%; }
+      div.screens .screens__images figure::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(/img/iphone-xr-mockup.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        left: -3rem;
+        top: 2.5rem;
+        width: 85%;
+        height: 85%;
+        z-index: -1; }
+      div.screens .screens__images figure::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(/img/iphone-xr-mockup.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        right: -3rem;
+        top: 2.5rem;
+        width: 85%;
+        height: 85%;
+        z-index: -1; }
 
 /*------------------------------------*\
     #IMPORTANT RULES
