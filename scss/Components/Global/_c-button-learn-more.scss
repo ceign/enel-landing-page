@@ -17,4 +17,12 @@
             margin: 0;
         }
     }
+
+    &:hover {
+        background-color: $pink;
+
+        .c-button-learn-more__text {
+            color: $blanco;
+        }
+    }
 }
