@@ -36,13 +36,16 @@
 @import './Components/Global/c-button-cta';
 @import './Components/Global/c-service-card';
 @import './Components/Global/c-button-learn-more';
+@import './Components/Global/c-input';
+
 @import './Components/Hero/header';
 @import './Components/Hero/home-info';
-@import './Components/Hero/call-to-action';
 @import './Components/Services/services';
 @import './Components/App-Info/app-info';
 @import './Components/Alerta-Enel/alerta-enel';
 @import './Components/Screens/screens';
+@import './Components/Subscribe/subscribe';
+@import './Components/CTA-Button/cta-button';
 
 //Utilities
 @import './Utilities/god-tier';

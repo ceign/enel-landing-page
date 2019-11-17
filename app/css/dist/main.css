@@ -414,7 +414,7 @@ div.full-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, auto);
-  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "cta cta cta cta" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta" "screens screens screens screens";
+  grid-template-areas: "header header header header" "home-info home-info home-info home-info" "services services services services" "app-info app-info app-info app-info" "alerta alerta alerta alerta" "screens screens screens screens" "subscribe subscribe subscribe subscribe" "cta cta cta cta";
   /**
  * A continuación se trabaja la estructura para las
     diferentes secciones del sitio.
@@ -432,35 +432,20 @@ div.full-wrapper {
               align-items: center;
       justify-items: left;
       grid-gap: 1rem; }
-  div.full-wrapper .home-info {
-    grid-area: home-info;
-    display: grid;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  div.full-wrapper .call-to-action {
-    grid-area: cta;
-    display: grid;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  div.full-wrapper div.services {
+  div.full-wrapper section.home-info {
+    grid-area: home-info; }
+  div.full-wrapper section.services {
     grid-area: services; }
-  div.full-wrapper .app-info {
+  div.full-wrapper section.app-info {
     grid-area: app-info; }
-  div.full-wrapper .alerta-enel {
+  div.full-wrapper section.alerta-enel {
     grid-area: alerta; }
-  div.full-wrapper .screens {
+  div.full-wrapper section.screens {
     grid-area: screens; }
+  div.full-wrapper section.subscribe {
+    grid-area: subscribe; }
+  div.full-wrapper section.call-to-action {
+    grid-area: cta; }
 
 .c-logo {
   width: 120px;
@@ -672,6 +657,50 @@ div.full-wrapper {
       font-size: 1.25rem;
       font-weight: 700;
       margin: 0; }
+  .c-button-learn-more:hover {
+    background-color: #FF0F64; }
+    .c-button-learn-more:hover .c-button-learn-more__text {
+      color: #FFF; }
+
+.c-input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FFF;
+  width: 100%;
+  height: 60px;
+  border-radius: 4px;
+  padding: 0 10px; }
+  .c-input input[type="text"] {
+    font-family: "Quicksand", sans-serif;
+    color: #666666;
+    width: 140px;
+    height: 30px;
+    border: none; }
+  .c-input button {
+    background-color: #FF0F64;
+    font-family: "Quicksand", sans-serif;
+    color: #FFF;
+    font-weight: 700;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
 
 header {
   width: 100%;
@@ -684,43 +713,62 @@ header {
     header .header .c-button-download {
       width: 100%; }
 
-div.home-info {
-  width: 100%;
-  height: auto;
-  min-height: 340px;
-  padding: 2rem 3rem; }
-  div.home-info .home-info__text {
-    position: relative;
-    color: #3D3D3D;
-    font-family: "Cabin", sans-serif;
-    font-size: 2.125rem;
-    font-weight: 500;
-    line-height: 3.5rem;
-    margin: 0; }
-    div.home-info .home-info__text span {
-      color: #41B9E6;
-      display: block;
-      font-size: 2.625rem; }
-    div.home-info .home-info__text::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: #FF0F64;
-      top: 5%;
-      left: -20px;
-      width: 6px;
-      height: 90%;
-      border-radius: 10px; }
-
-div.call-to-action {
-  padding: 2rem 0;
+section.home-info {
   width: 100%;
   height: auto; }
+  section.home-info .home-info__wrapper {
+    width: 100%;
+    height: 100%; }
+    section.home-info .home-info__wrapper .home-info__text {
+      padding: 2rem 3rem; }
+      section.home-info .home-info__wrapper .home-info__text h1 {
+        position: relative;
+        color: #3D3D3D;
+        font-family: "Cabin", sans-serif;
+        font-size: 2.125rem;
+        font-weight: 500;
+        line-height: 3.5rem;
+        margin: 0; }
+        section.home-info .home-info__wrapper .home-info__text h1 span {
+          color: #41B9E6;
+          display: block;
+          font-size: 2.625rem; }
+        section.home-info .home-info__wrapper .home-info__text h1::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: #FF0F64;
+          top: 5%;
+          left: -20px;
+          width: 6px;
+          height: 90%;
+          border-radius: 10px; }
+    section.home-info .home-info__wrapper .home-info__button {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%;
+      height: auto;
+      padding: 2rem 0; }
 
-div.services {
+section.services {
   width: 100%;
   height: auto; }
-  div.services .services__wrapper {
+  section.services .services__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -741,20 +789,20 @@ div.services {
     width: 100%;
     height: 100%;
     padding: 4rem 0 0; }
-    div.services .services__wrapper .c-service-card {
+    section.services .services__wrapper .c-service-card {
       margin: 2rem 0; }
-      div.services .services__wrapper .c-service-card.c-service-card--shadow {
+      section.services .services__wrapper .c-service-card.c-service-card--shadow {
         -webkit-box-shadow: 0px 0px 15px 2px #CCCCCC;
                 box-shadow: 0px 0px 15px 2px #CCCCCC; }
 
-div.app-info {
+section.app-info {
   width: 100%;
   height: auto;
   padding-bottom: 5rem; }
-  div.app-info .app-info__wrapper {
+  section.app-info .app-info__wrapper {
     width: 100%;
     height: 100%; }
-    div.app-info .app-info__wrapper .app-info__cellphone {
+    section.app-info .app-info__wrapper .app-info__cellphone {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -772,17 +820,17 @@ div.app-info {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
-      div.app-info .app-info__wrapper .app-info__cellphone figure {
+      section.app-info .app-info__wrapper .app-info__cellphone figure {
         max-width: 280px;
         margin: 0; }
-        div.app-info .app-info__wrapper .app-info__cellphone figure img {
+        section.app-info .app-info__wrapper .app-info__cellphone figure img {
           display: block;
           width: 100%; }
-    div.app-info .app-info__wrapper .app-info__text {
+    section.app-info .app-info__wrapper .app-info__text {
       width: 100%;
       height: auto;
       padding: 4rem 2rem 1rem 3rem; }
-      div.app-info .app-info__wrapper .app-info__text .app-info__title {
+      section.app-info .app-info__wrapper .app-info__text .app-info__title {
         color: #3D3D3D;
         font-family: "Cabin", sans-serif;
         position: relative;
@@ -791,7 +839,7 @@ div.app-info {
         font-weight: 500;
         line-height: 3rem;
         margin: 0; }
-        div.app-info .app-info__wrapper .app-info__text .app-info__title::before {
+        section.app-info .app-info__wrapper .app-info__text .app-info__title::before {
           content: "";
           display: block;
           position: absolute;
@@ -801,14 +849,14 @@ div.app-info {
           width: 6px;
           height: 90%;
           border-radius: 10px; }
-      div.app-info .app-info__wrapper .app-info__text p {
+      section.app-info .app-info__wrapper .app-info__text p {
         font-family: "Quicksand", sans-serif;
         color: #666666;
         font-weight: 500;
         font-size: 1.125rem;
         line-height: 1.5rem;
         margin: 2rem 0; }
-    div.app-info .app-info__wrapper .app-info__button {
+    section.app-info .app-info__wrapper .app-info__button {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -827,14 +875,14 @@ div.app-info {
           -ms-flex-pack: center;
               justify-content: center; }
 
-div.alerta-enel {
+section.alerta-enel {
   width: 100%;
   height: auto;
   padding-bottom: 5rem; }
-  div.alerta-enel .alerta-enel__wrapper {
+  section.alerta-enel .alerta-enel__wrapper {
     width: 100%;
     height: 100%; }
-    div.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone {
+    section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -852,17 +900,17 @@ div.alerta-enel {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
-      div.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure {
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure {
         max-width: 280px;
         margin: 0; }
-        div.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure img {
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure img {
           display: block;
           width: 100%; }
-    div.alerta-enel .alerta-enel__wrapper .alerta-enel__text {
+    section.alerta-enel .alerta-enel__wrapper .alerta-enel__text {
       width: 100%;
       height: auto;
       padding: 4rem 2rem 1rem 3rem; }
-      div.alerta-enel .alerta-enel__wrapper .alerta-enel__text .alerta-enel__title {
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__text .alerta-enel__title {
         color: #3D3D3D;
         font-family: "Cabin", sans-serif;
         position: relative;
@@ -871,7 +919,7 @@ div.alerta-enel {
         font-weight: 500;
         line-height: 3rem;
         margin: 0; }
-        div.alerta-enel .alerta-enel__wrapper .alerta-enel__text .alerta-enel__title::before {
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__text .alerta-enel__title::before {
           content: "";
           display: block;
           position: absolute;
@@ -881,14 +929,14 @@ div.alerta-enel {
           width: 6px;
           height: 90%;
           border-radius: 10px; }
-      div.alerta-enel .alerta-enel__wrapper .alerta-enel__text p {
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__text p {
         font-family: "Quicksand", sans-serif;
         color: #666666;
         font-weight: 500;
         font-size: 1.125rem;
         line-height: 1.5rem;
         margin: 2rem 0; }
-    div.alerta-enel .alerta-enel__wrapper .alerta-enel__button {
+    section.alerta-enel .alerta-enel__wrapper .alerta-enel__button {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -907,21 +955,25 @@ div.alerta-enel {
           -ms-flex-pack: center;
               justify-content: center; }
 
-div.screens {
-  padding: 2rem 3rem; }
-  div.screens .screens__title h2 {
-    color: #3D3D3D;
-    font-family: "Cabin", sans-serif;
-    text-align: center;
-    max-width: 320px;
-    font-size: 2.125rem;
-    font-weight: 500;
-    line-height: 3rem;
-    margin: 0; }
-    div.screens .screens__title h2 span {
-      color: #41B9E6;
-      font-size: 2.625rem; }
-  div.screens .screens__images {
+section.screens {
+  padding: 3rem 3rem 6rem; }
+  section.screens .screens__title {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem; }
+    section.screens .screens__title h2 {
+      color: #3D3D3D;
+      font-family: "Cabin", sans-serif;
+      text-align: center;
+      max-width: 320px;
+      font-size: 2.125rem;
+      font-weight: 500;
+      line-height: 2.8rem;
+      margin: 0; }
+      section.screens .screens__title h2 span {
+        color: #41B9E6;
+        font-size: 2.625rem; }
+  section.screens .screens__images {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -939,14 +991,14 @@ div.screens {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    div.screens .screens__images figure {
+    section.screens .screens__images figure {
       position: relative;
       margin: 0;
       max-width: 280px; }
-      div.screens .screens__images figure img {
+      section.screens .screens__images figure img {
         display: block;
         width: 100%; }
-      div.screens .screens__images figure::before {
+      section.screens .screens__images figure::before {
         content: "";
         display: block;
         position: absolute;
@@ -958,7 +1010,7 @@ div.screens {
         width: 85%;
         height: 85%;
         z-index: -1; }
-      div.screens .screens__images figure::after {
+      section.screens .screens__images figure::after {
         content: "";
         display: block;
         position: absolute;
@@ -970,6 +1022,79 @@ div.screens {
         width: 85%;
         height: 85%;
         z-index: -1; }
+
+section.subscribe {
+  background-color: #FF0F64;
+  padding: 5rem 0 4rem;
+  width: 100%;
+  height: auto; }
+  section.subscribe .subscribe__wrapper {
+    width: 100%;
+    height: 100%; }
+    section.subscribe .subscribe__wrapper .subscribe__title {
+      padding: 0 1rem 0 3rem; }
+      section.subscribe .subscribe__wrapper .subscribe__title h2 {
+        color: #FFF;
+        font-family: "Cabin", sans-serif;
+        position: relative;
+        max-width: 320px;
+        font-size: 2.125rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+        margin: 0; }
+        section.subscribe .subscribe__wrapper .subscribe__title h2::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: #FFF;
+          top: 5%;
+          left: -20px;
+          width: 6px;
+          height: 90%;
+          border-radius: 10px; }
+    section.subscribe .subscribe__wrapper .subscribe__input {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 3rem 1rem;
+      max-width: 350px;
+      margin: auto; }
+
+section.call-to-action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 6rem 0; }
 
 /*------------------------------------*\
     #IMPORTANT RULES

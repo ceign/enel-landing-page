@@ -1,32 +1,46 @@
-div.home-info {
+section.home-info {
     width: 100%;
     height: auto;
-    min-height: 340px;
-    padding: 2rem 3rem;
 
-    .home-info__text {
-        position: relative;
-        color: $dark-title;
-        font-family: $titulo;
-        font-size: 2.125rem;
-        font-weight: 500;
-        line-height: 3.5rem;
-        margin: 0;
+    .home-info__wrapper {
+        width: 100%;
+        height: 100%;
 
-        span {
-            color: $sky;
-            display: block;
-            font-size: 2.625rem;
+        .home-info__text {
+            padding: 2rem 3rem;
+
+            h1 {
+                position: relative;
+                color: $dark-title;
+                font-family: $titulo;
+                font-size: 2.125rem;
+                font-weight: 500;
+                line-height: 3.5rem;
+                margin: 0;
+
+                span {
+                    color: $sky;
+                    display: block;
+                    font-size: 2.625rem;
+                }
+
+                &::before {
+                    @include pseudo();
+                    background-color: $pink;
+                    top: 5%;
+                    left: -20px;
+                    width: 6px;
+                    height: 90%;
+                    border-radius: 10px;
+                }
+            }
         }
 
-        &::before {
-            @include pseudo();
-            background-color: $pink;
-            top: 5%;
-            left: -20px;
-            width: 6px;
-            height: 90%;
-            border-radius: 10px;
+        .home-info__button {
+            @include flex-align(row, center, center);
+            width: 100%;
+            height: auto;
+            padding: 2rem 0;
         }
     }
 }

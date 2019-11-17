@@ -1,7 +1,11 @@
-div.screens {
-    padding: 2rem 3rem;
+section.screens {
+    padding: 3rem 3rem 6rem;
 
     .screens__title {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 2rem;
+
         h2 {
             color: $dark-title;
             font-family: $titulo;
@@ -9,7 +13,7 @@ div.screens {
             max-width: 320px;
             font-size: 2.125rem;
             font-weight: 500;
-            line-height: 3rem;
+            line-height: 2.8rem;
             margin: 0;
 
             span {
