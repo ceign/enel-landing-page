@@ -1,0 +1,43 @@
+section.subscribe {
+    background-color: $pink;
+    padding: 5rem 0 4rem;
+    width: 100%;
+    height: auto;
+
+    .subscribe__wrapper {
+        width: 100%;
+        height: 100%;
+
+        .subscribe__title {
+            padding: 0 1rem 0 3rem;
+
+            h2 {
+                color: $blanco;
+                font-family: $titulo;
+                position: relative;
+                max-width: 320px;
+                font-size: 2.125rem;
+                font-weight: 500;
+                line-height: 2.8rem;
+                margin: 0;
+
+                &::before {
+                    @include pseudo();
+                    background-color: $blanco;
+                    top: 5%;
+                    left: -20px;
+                    width: 6px;
+                    height: 90%;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .subscribe__input {
+            @include flex-align(row, center, center);
+            padding: 3rem 1rem;
+            max-width: 350px;
+            margin: auto;
+        }
+    }
+}
