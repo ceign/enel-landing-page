@@ -1,0 +1,27 @@
+.c-footer-list {
+    width: 100%;
+    height: auto;
+
+    h3 {
+        font-family: $texto;
+        color: $blanco;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            text-decoration: none;
+            margin: 1.3rem 0;
+
+            a {
+                color: $blanco;
+                font-family: $texto;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
