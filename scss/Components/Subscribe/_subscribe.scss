@@ -40,4 +40,23 @@ section.subscribe {
             margin: auto;
         }
     }
+
+    @include s {
+        .subscribe__wrapper {
+            @include flex-align(column, center, center);
+
+            .subscribe__input {
+                max-width: none;
+                width: 390px;
+
+                input[type="text"] {
+                    width: 160px;
+                }
+
+                button {
+                    width: 160px;
+                }
+            }
+        }
+    }
 }

@@ -43,4 +43,28 @@ section.home-info {
             padding: 2rem 0;
         }
     }
+
+    @include s {
+        .home-info__wrapper {
+            .home-info__text {
+                @include flex-align(column, center, center);
+
+                h1 {
+                    max-width: 380px;
+                }
+            }
+        }
+    }
+
+    @include st {
+        .home-info__wrapper {
+            .home-info__text {
+                padding: 6rem 3rem;
+
+                h1 {
+                    max-width: 440px;
+                }
+            }
+        }
+    }
 }

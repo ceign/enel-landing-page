@@ -61,4 +61,10 @@ section.screens {
             }
         }
     }
+
+    @include s {
+        .screens__title {
+            @include flex-align(column, center, center);
+        }
+    }
 }

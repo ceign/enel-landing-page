@@ -34,4 +34,41 @@ footer.footer {
             }
         }
     }
+
+    @include s {
+        padding: 3rem 2rem 1rem 4rem;
+
+        .footer__wrapper {
+            .footer__logo {
+                justify-content: left;
+                max-width: 120px;
+            }
+        }
+    }
+
+    @include st {
+        .footer__wrapper {
+            .c-footer-list {
+                ul {
+                    li {
+                        width: max-content;
+
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .footer__logo {
+                max-width: 110px;
+            }
+
+            .footer__legal {
+                p {
+                    text-align: right;
+                }
+            }
+        }
+    }
 }

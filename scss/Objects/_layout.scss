@@ -49,6 +49,13 @@ div.full-wrapper {
             justify-items: left;
             grid-gap: 1rem;
         }
+
+        @include st {
+            .header {
+                grid-gap: 6rem;
+                justify-items: center;
+            }
+        }
     }
 
     //Home Info
@@ -97,6 +104,30 @@ div.full-wrapper {
 
     footer.footer {
         grid-area: footer;
-    }
 
+        @include s {
+            .footer__wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 6.5rem;
+            }
+        }
+
+        @include st {
+            .footer__wrapper {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, auto);
+                grid-column-gap: 2rem;
+
+                .footer__logo {
+                    grid-column: 1/2;
+                }
+
+                .footer__legal {
+                    grid-column: 2/-1;
+                }
+            }
+        }
+    }
 }

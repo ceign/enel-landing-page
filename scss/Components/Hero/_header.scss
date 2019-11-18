@@ -14,4 +14,12 @@ header {
             width: 100%;
         }
     }
+
+    @include st {
+        .header {
+            .c-button-download {
+                width: 75%;
+            }
+        }
+    }
 }

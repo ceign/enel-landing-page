@@ -62,4 +62,27 @@ section.alerta-enel {
             @include flex-align(row, center, center);
         }
     }
+
+    @include s {
+        .alerta-enel__wrapper {
+            .alerta-enel__text {
+                @include flex-align (column, center, center);
+            }
+        }
+    }
+
+    @include st {
+        .alerta-enel__wrapper {
+            .alerta-enel__text {
+                .alerta-enel__title {
+                    max-width: 430px;
+                }
+
+                p {
+                    max-width: 550px;
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
 }

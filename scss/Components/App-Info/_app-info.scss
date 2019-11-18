@@ -61,4 +61,27 @@ section.app-info {
             @include flex-align(row, center, center);
         }
     }
+
+    @include s {
+        .app-info__wrapper {
+            .app-info__text {
+                @include flex-align (column, center, center);
+            }
+        }
+    }
+
+    @include st {
+        .app-info__wrapper {
+            .app-info__text {
+                .app-info__title {
+                    max-width: 400px;
+                }
+
+                p {
+                    max-width: 550px;
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
 }
