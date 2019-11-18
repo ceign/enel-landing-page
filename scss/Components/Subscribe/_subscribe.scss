@@ -59,4 +59,36 @@ section.subscribe {
             }
         }
     }
+
+    @include sd {
+        padding: 5rem 0 5rem;
+
+        .subscribe__wrapper {
+            flex-direction: row;
+
+            .subscribe__title {
+                h2 {
+                    max-width: 450px;
+                    font-weight: 400;
+                }
+            }
+
+            .subscribe__input {
+                margin: initial;
+                width: 500px;
+
+                .c-input {
+                    padding: 0 10px 0 25px;
+
+                    input[type="text"] {
+                        width: 220px;
+                    }
+
+                    button {
+                        width: 190px;
+                    }
+                }
+            }
+        }
+    }
 }

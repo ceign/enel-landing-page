@@ -71,4 +71,20 @@ footer.footer {
             }
         }
     }
+
+    @include sd {
+        padding: 3rem 8rem 2rem 8rem;
+
+        .footer__wrapper {
+            .c-footer-list {
+                ul {
+                    li {
+                        a {
+                            font-size: 1.125rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
