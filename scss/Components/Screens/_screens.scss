@@ -60,11 +60,45 @@ section.screens {
                 z-index: -1;
             }
         }
+
+        .screens__row-images {
+            display: none;
+        }
     }
 
     @include s {
         .screens__title {
             @include flex-align(column, center, center);
+        }
+    }
+
+    @include sd {
+        padding: 3rem 0rem 6rem;
+
+        .screens__images {
+            justify-items: flex-end;
+            overflow: hidden;
+
+            figure {
+                position: initial;
+                max-width: 320px;
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+
+            .screens__row-images {
+                @include flex-align(row, center, space-between);
+
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                    margin-right: 1rem;
+                    box-shadow: 0px 3px 15px 1px $grey;
+                }
+            }
         }
     }
 }

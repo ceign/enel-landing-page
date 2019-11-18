@@ -86,6 +86,14 @@ div.full-wrapper {
 
     section.screens {
         grid-area: screens;
+
+        @include sd {
+            .screens__images {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 2rem;
+            }
+        }
     }
 
     //Subscribe
@@ -127,6 +135,12 @@ div.full-wrapper {
                 .footer__legal {
                     grid-column: 2/-1;
                 }
+            }
+        }
+
+        @include sd {
+            .footer__wrapper {
+                grid-column-gap: 6rem;
             }
         }
     }

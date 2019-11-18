@@ -446,6 +446,11 @@ div.full-wrapper {
     grid-area: alerta; }
   div.full-wrapper section.screens {
     grid-area: screens; }
+    @media (min-width: 1200px) {
+      div.full-wrapper section.screens .screens__images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem; } }
   div.full-wrapper section.subscribe {
     grid-area: subscribe; }
   div.full-wrapper section.call-to-action {
@@ -467,6 +472,9 @@ div.full-wrapper {
           grid-column: 1/2; }
         div.full-wrapper footer.footer .footer__wrapper .footer__legal {
           grid-column: 2/-1; } }
+    @media (min-width: 1200px) {
+      div.full-wrapper footer.footer .footer__wrapper {
+        grid-column-gap: 6rem; } }
 
 .c-logo {
   width: 120px;
@@ -1141,6 +1149,8 @@ section.screens {
         width: 85%;
         height: 85%;
         z-index: -1; }
+    section.screens .screens__images .screens__row-images {
+      display: none; }
   @media (min-width: 575px) {
     section.screens .screens__title {
       display: -webkit-box;
@@ -1160,6 +1170,41 @@ section.screens {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  @media (min-width: 1200px) {
+    section.screens {
+      padding: 3rem 0rem 6rem; }
+      section.screens .screens__images {
+        justify-items: flex-end;
+        overflow: hidden; }
+        section.screens .screens__images figure {
+          position: initial;
+          max-width: 320px; }
+          section.screens .screens__images figure::before, section.screens .screens__images figure::after {
+            display: none; }
+        section.screens .screens__images .screens__row-images {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          section.screens .screens__images .screens__row-images img {
+            width: 100%;
+            max-width: 200px;
+            margin-right: 1rem;
+            -webkit-box-shadow: 0px 3px 15px 1px #CCCCCC;
+                    box-shadow: 0px 3px 15px 1px #CCCCCC; } }
 
 section.subscribe {
   background-color: #FF0F64;
@@ -1237,6 +1282,27 @@ section.subscribe {
           width: 160px; }
         section.subscribe .subscribe__wrapper .subscribe__input button {
           width: 160px; } }
+  @media (min-width: 1200px) {
+    section.subscribe {
+      padding: 5rem 0 5rem; }
+      section.subscribe .subscribe__wrapper {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        section.subscribe .subscribe__wrapper .subscribe__title h2 {
+          max-width: 450px;
+          font-weight: 400; }
+        section.subscribe .subscribe__wrapper .subscribe__input {
+          margin: initial;
+          width: 500px; }
+          section.subscribe .subscribe__wrapper .subscribe__input .c-input {
+            padding: 0 10px 0 25px; }
+            section.subscribe .subscribe__wrapper .subscribe__input .c-input input[type="text"] {
+              width: 220px; }
+            section.subscribe .subscribe__wrapper .subscribe__input .c-input button {
+              width: 190px; } }
 
 section.call-to-action {
   display: -webkit-box;
@@ -1320,6 +1386,11 @@ footer.footer {
       max-width: 110px; }
     footer.footer .footer__wrapper .footer__legal p {
       text-align: right; } }
+  @media (min-width: 1200px) {
+    footer.footer {
+      padding: 3rem 8rem 2rem 8rem; }
+      footer.footer .footer__wrapper .c-footer-list ul li a {
+        font-size: 1.125rem; } }
 
 /*------------------------------------*\
     #IMPORTANT RULES
