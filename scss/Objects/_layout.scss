@@ -80,6 +80,27 @@ div.full-wrapper {
 
     section.alerta-enel {
         grid-area: alerta;
+
+        @include sd {
+            .alerta-enel__wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .alerta-enel__cellphone {
+                    grid-column: 2/-1;
+                }
+
+                .alerta-enel__text {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+
+                .alerta-enel__button {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+        }
     }
 
     //Screens

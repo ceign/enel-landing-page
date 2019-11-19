@@ -444,6 +444,18 @@ div.full-wrapper {
     grid-area: app-info; }
   div.full-wrapper section.alerta-enel {
     grid-area: alerta; }
+    @media (min-width: 1200px) {
+      div.full-wrapper section.alerta-enel .alerta-enel__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        div.full-wrapper section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone {
+          grid-column: 2/-1; }
+        div.full-wrapper section.alerta-enel .alerta-enel__wrapper .alerta-enel__text {
+          grid-column: 1/2;
+          grid-row: 1/2; }
+        div.full-wrapper section.alerta-enel .alerta-enel__wrapper .alerta-enel__button {
+          grid-column: 1/2;
+          grid-row: 1/2; } }
   div.full-wrapper section.screens {
     grid-area: screens; }
     @media (min-width: 1200px) {
@@ -1002,6 +1014,8 @@ section.alerta-enel {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span {
+        display: none; }
       section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone figure {
         max-width: 280px;
         margin: 0; }
@@ -1081,6 +1095,160 @@ section.alerta-enel {
     section.alerta-enel .alerta-enel__wrapper .alerta-enel__text p {
       max-width: 550px;
       margin-top: 3rem; } }
+  @media (min-width: 1200px) {
+    section.alerta-enel .alerta-enel__wrapper {
+      padding: 4rem 0; }
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone {
+        position: relative; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span {
+          display: block;
+          border-radius: 50%; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:first-child {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: -2%;
+          right: 35%;
+          bottom: 0;
+          left: unset;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(2) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 0%;
+          right: 25%;
+          bottom: 0;
+          left: unset;
+          width: 16px;
+          height: 16px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(3) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: -4%;
+          right: 13%;
+          bottom: 0;
+          left: unset;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(4) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 3%;
+          right: 10%;
+          bottom: 0;
+          left: unset;
+          width: 16px;
+          height: 16px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(5) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 5%;
+          right: 2%;
+          bottom: 0;
+          left: unset;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(6) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 3%;
+          bottom: 3%;
+          left: unset;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(7) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 10%;
+          bottom: 0;
+          left: unset;
+          width: 16px;
+          height: 16px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(8) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 13%;
+          bottom: 5%;
+          left: unset;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(9) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 20%;
+          bottom: -2%;
+          left: unset;
+          width: 16px;
+          height: 16px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone span:nth-child(10) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 30%;
+          bottom: -5%;
+          left: unset;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.alerta-enel .alerta-enel__wrapper .alerta-enel__cellphone::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-image: url(/img/deco-bubble.png);
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          right: 0;
+          top: auto;
+          width: 50%;
+          height: 90%;
+          z-index: -1; }
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__text {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding-left: 25%;
+        padding-bottom: 10%; }
+      section.alerta-enel .alerta-enel__wrapper .alerta-enel__button {
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        padding-left: 25%;
+        padding-bottom: 10%; } }
 
 section.screens {
   padding: 3rem 3rem 6rem; }
@@ -1118,6 +1286,8 @@ section.screens {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    section.screens .screens__images span {
+      display: none; }
     section.screens .screens__images figure {
       position: relative;
       margin: 0;
@@ -1174,8 +1344,104 @@ section.screens {
     section.screens {
       padding: 3rem 0rem 6rem; }
       section.screens .screens__images {
+        position: relative;
         justify-items: flex-end;
         overflow: hidden; }
+        section.screens .screens__images span {
+          display: block;
+          border-radius: 50%; }
+        section.screens .screens__images span:first-child {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 25%;
+          right: 0;
+          bottom: 0;
+          left: 5%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.screens .screens__images span:nth-child(2) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 35%;
+          right: 0;
+          bottom: 0;
+          left: 13%;
+          width: 16px;
+          height: 16px; }
+        section.screens .screens__images span:nth-child(3) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 42%;
+          right: 0;
+          bottom: 0;
+          left: 17%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.screens .screens__images span:nth-child(4) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 45%;
+          right: 0;
+          bottom: 0;
+          left: 6%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.screens .screens__images span:nth-child(5) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 60%;
+          right: 0;
+          bottom: 0;
+          left: 3%;
+          width: 16px;
+          height: 16px; }
+        section.screens .screens__images span:nth-child(6) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 58%;
+          right: 0;
+          bottom: 0;
+          left: 12%;
+          width: 16px;
+          height: 16px; }
+        section.screens .screens__images span:nth-child(7) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 76%;
+          right: 0;
+          bottom: 0;
+          left: 6%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.screens .screens__images span:nth-child(8) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 80%;
+          right: 0;
+          bottom: 0;
+          left: 15%;
+          width: 16px;
+          height: 16px; }
         section.screens .screens__images figure {
           position: initial;
           max-width: 320px; }
@@ -1198,7 +1464,8 @@ section.screens {
           -webkit-box-pack: justify;
           -webkit-justify-content: space-between;
               -ms-flex-pack: justify;
-                  justify-content: space-between; }
+                  justify-content: space-between;
+          padding-left: 1rem; }
           section.screens .screens__images .screens__row-images img {
             width: 100%;
             max-width: 200px;

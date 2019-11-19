@@ -26,6 +26,10 @@ section.screens {
     .screens__images {
         @include flex-align(row, center, center);
 
+        span {
+            display: none;
+        }
+
         figure {
             position: relative;
             margin: 0;
@@ -76,8 +80,74 @@ section.screens {
         padding: 3rem 0rem 6rem;
 
         .screens__images {
+            position: relative;
             justify-items: flex-end;
             overflow: hidden;
+
+            span {
+                display: block;
+                border-radius: 50%;
+            }
+
+            span:first-child {
+                @include border(6px, $pink);
+                @include abs-position(25%, 0, 0, 5%);
+                opacity: .45;
+                width: 20px;
+                height: 20px;
+            }
+
+            span:nth-child(2) {
+                @include border(4px, $pink);
+                @include abs-position(35%, 0, 0, 13%);
+                width: 16px;
+                height: 16px;
+            }
+
+            span:nth-child(3) {
+                @include border(6px, $pink);
+                @include abs-position(42%, 0, 0, 17%);
+                opacity: .45;
+                width: 20px;
+                height: 20px;
+            }
+
+            span:nth-child(4) {
+                @include border(6px, $pink);
+                @include abs-position(45%, 0, 0, 6%);
+                opacity: .45;
+                width: 20px;
+                height: 20px;
+            }
+
+            span:nth-child(5) {
+                @include border(4px, $pink);
+                @include abs-position(60%, 0, 0, 3%);
+                width: 16px;
+                height: 16px;
+            }
+
+            span:nth-child(6) {
+                @include border(4px, $pink);
+                @include abs-position(58%, 0, 0, 12%);
+                width: 16px;
+                height: 16px;
+            }
+
+            span:nth-child(7) {
+                @include border(6px, $pink);
+                @include abs-position(76%, 0, 0, 6%);
+                opacity: .45;
+                width: 20px;
+                height: 20px;
+            }
+
+            span:nth-child(8) {
+                @include border(4px, $pink);
+                @include abs-position(80%, 0, 0, 15%);
+                width: 16px;
+                height: 16px;
+            }
 
             figure {
                 position: initial;
@@ -91,6 +161,7 @@ section.screens {
 
             .screens__row-images {
                 @include flex-align(row, center, space-between);
+                padding-left: 1rem;
 
                 img {
                     width: 100%;

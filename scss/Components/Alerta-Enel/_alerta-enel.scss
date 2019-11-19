@@ -10,6 +10,10 @@ section.alerta-enel {
         .alerta-enel__cellphone {
             @include flex-align(row, center, center);
 
+            span {
+                display: none;
+            }
+
             figure {
                 max-width: 280px;
                 margin: 0;
@@ -82,6 +86,123 @@ section.alerta-enel {
                     max-width: 550px;
                     margin-top: 3rem;
                 }
+            }
+        }
+    }
+
+    @include sd {
+        .alerta-enel__wrapper {
+            padding: 4rem 0;
+
+            .alerta-enel__cellphone {
+                position: relative;
+
+                span {
+                    display: block;
+                    border-radius: 50%;
+                }
+
+                span:first-child {
+                    @include border(6px, $pink);
+                    @include abs-position(-2%, 35%, 0, unset);
+                    opacity: .45;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span:nth-child(2) {
+                    @include border(4px, $pink);
+                    @include abs-position(0%, 25%, 0, unset);
+                    width: 16px;
+                    height: 16px;
+                }
+
+                span:nth-child(3) {
+                    @include border(6px, $pink);
+                    @include abs-position(-4%, 13%, 0, unset);
+                    opacity: .45;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span:nth-child(4) {
+                    @include border(4px, $pink);
+                    @include abs-position(3%, 10%, 0, unset);
+                    width: 16px;
+                    height: 16px;
+                }
+
+                span:nth-child(5) {
+                    @include border(6px, $pink);
+                    @include abs-position(5%, 2%, 0, unset);
+                    opacity: .45;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span:nth-child(6) {
+                    @include border(6px, $pink);
+                    @include abs-position(unset, 3%, 3%, unset);
+                    opacity: .45;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span:nth-child(7) {
+                    @include border(4px, $pink);
+                    @include abs-position(unset, 10%, 0, unset);
+                    width: 16px;
+                    height: 16px;
+                }
+
+                span:nth-child(8) {
+                    @include border(6px, $pink);
+                    @include abs-position(unset, 13%, 5%, unset);
+                    opacity: .45;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span:nth-child(9) {
+                    @include border(4px, $pink);
+                    @include abs-position(unset, 20%, -2%, unset);
+                    width: 16px;
+                    height: 16px;
+                }
+
+                span:nth-child(10) {
+                    @include border(6px, $pink);
+                    @include abs-position(unset, 30%, -5%, unset);
+                    opacity: .45;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &::before {
+                    @include pseudo();
+                    background-image: url(/img/deco-bubble.png);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    right: 0;
+                    top: auto;
+                    width: 50%;
+                    height: 90%;
+                    z-index: -1;
+
+                }
+            }
+
+            .alerta-enel__text {
+                align-items: flex-start;
+                padding-left: 25%;
+                padding-bottom: 10%;
+            }
+
+            .alerta-enel__button {
+                align-items: flex-end;
+                justify-content: flex-start;
+                padding-left: 25%;
+                padding-bottom: 10%;
             }
         }
     }
