@@ -68,12 +68,40 @@ div.full-wrapper {
 
     section.services {
         grid-area: services;
+
+        @include sd {
+            .services__wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
     }
 
     //App Information
 
     section.app-info {
         grid-area: app-info;
+
+        @include sd {
+            .app-info__wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .app-info__cellphone {
+                    grid-column: 1/2;
+                }
+
+                .app-info__text {
+                    grid-column: 2/-1;
+                    grid-row: 1/2;
+                }
+
+                .app-info__button {
+                    grid-column: 2/-1;
+                    grid-row: 1/2;
+                }
+            }
+        }
     }
 
     //Alerta Enel

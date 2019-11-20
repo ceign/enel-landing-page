@@ -440,8 +440,24 @@ div.full-wrapper {
     grid-area: home-info; }
   div.full-wrapper section.services {
     grid-area: services; }
+    @media (min-width: 1200px) {
+      div.full-wrapper section.services .services__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); } }
   div.full-wrapper section.app-info {
     grid-area: app-info; }
+    @media (min-width: 1200px) {
+      div.full-wrapper section.app-info .app-info__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        div.full-wrapper section.app-info .app-info__wrapper .app-info__cellphone {
+          grid-column: 1/2; }
+        div.full-wrapper section.app-info .app-info__wrapper .app-info__text {
+          grid-column: 2/-1;
+          grid-row: 1/2; }
+        div.full-wrapper section.app-info .app-info__wrapper .app-info__button {
+          grid-column: 2/-1;
+          grid-row: 1/2; } }
   div.full-wrapper section.alerta-enel {
     grid-area: alerta; }
     @media (min-width: 1200px) {
@@ -883,6 +899,10 @@ section.services {
       section.services .services__wrapper .c-service-card.c-service-card--shadow {
         -webkit-box-shadow: 0px 0px 15px 2px #CCCCCC;
                 box-shadow: 0px 0px 15px 2px #CCCCCC; }
+  @media (min-width: 1200px) {
+    section.services .services__wrapper {
+      justify-items: center;
+      padding: 4rem 2rem 4rem; } }
 
 section.app-info {
   width: 100%;
@@ -909,6 +929,8 @@ section.app-info {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
+      section.app-info .app-info__wrapper .app-info__cellphone span {
+        display: none; }
       section.app-info .app-info__wrapper .app-info__cellphone figure {
         max-width: 280px;
         margin: 0; }
@@ -988,6 +1010,162 @@ section.app-info {
     section.app-info .app-info__wrapper .app-info__text p {
       max-width: 550px;
       margin-top: 3rem; } }
+  @media (min-width: 1200px) {
+    section.app-info .app-info__wrapper {
+      padding: 4rem 0; }
+      section.app-info .app-info__wrapper .app-info__cellphone {
+        position: relative; }
+        section.app-info .app-info__wrapper .app-info__cellphone span {
+          display: block;
+          border-radius: 50%; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:first-child {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 7%;
+          right: 0;
+          bottom: 0;
+          left: 3%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(2) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 7%;
+          right: 0;
+          bottom: 0;
+          left: 10%;
+          width: 16px;
+          height: 16px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(3) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 1%;
+          right: 0;
+          bottom: 0;
+          left: 15%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(4) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: -2%;
+          right: 0;
+          bottom: 0;
+          left: 24%;
+          width: 16px;
+          height: 16px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(5) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 34%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(6) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 0;
+          bottom: 2%;
+          left: 3%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(7) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 0;
+          bottom: -2%;
+          left: 12%;
+          width: 16px;
+          height: 16px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(8) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 0;
+          bottom: 0;
+          left: 19%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(9) {
+          border-width: 4px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 0;
+          bottom: -2%;
+          left: 28%;
+          width: 16px;
+          height: 16px; }
+        section.app-info .app-info__wrapper .app-info__cellphone span:nth-child(10) {
+          border-width: 6px;
+          border-style: solid;
+          border-color: #FF0F64;
+          position: absolute;
+          top: unset;
+          right: 0;
+          bottom: -7%;
+          left: 35%;
+          opacity: .45;
+          width: 20px;
+          height: 20px; }
+        section.app-info .app-info__wrapper .app-info__cellphone::before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-image: url(/img/deco-bubble-1.png);
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          left: 0;
+          top: auto;
+          width: 50%;
+          height: 90%;
+          z-index: -1; }
+      section.app-info .app-info__wrapper .app-info__text {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding-right: 15%;
+        padding-bottom: 10%; }
+        section.app-info .app-info__wrapper .app-info__text .app-info__title {
+          max-width: 430px; }
+      section.app-info .app-info__wrapper .app-info__button {
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        padding-left: 3rem;
+        padding-bottom: 10%; } }
 
 section.alerta-enel {
   width: 100%;
@@ -1223,7 +1401,7 @@ section.alerta-enel {
           content: "";
           display: block;
           position: absolute;
-          background-image: url(/img/deco-bubble.png);
+          background-image: url(/img/deco-bubble-2.png);
           background-size: 100% 100%;
           background-repeat: no-repeat;
           right: 0;
