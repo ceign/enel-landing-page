@@ -1,12 +1,13 @@
 div.bubble-decoration {
     display: none;
-    z-index: -1;
+    z-index: -5;
 
     img {
         position: absolute;
         top: 0;
         right: 0;
         max-width: 600px;
+        z-index: -5;
     }
 
     @include sd {

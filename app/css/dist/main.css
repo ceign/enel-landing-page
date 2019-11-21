@@ -794,12 +794,13 @@ div.full-wrapper {
 
 div.bubble-decoration {
   display: none;
-  z-index: -1; }
+  z-index: -5; }
   div.bubble-decoration img {
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 600px; }
+    max-width: 600px;
+    z-index: -5; }
   @media (min-width: 1200px) {
     div.bubble-decoration {
       display: block; } }
