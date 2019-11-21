@@ -50,6 +50,16 @@ div.full-wrapper {
             grid-gap: 1rem;
         }
 
+        .header-desktop {
+            .c-navigation {
+                display: grid;
+                grid-template-columns: 15% 55% auto;
+                align-items: center;
+                justify-items: center;
+                grid-column-gap: 3rem;
+            }
+        }
+
         @include st {
             .header {
                 grid-gap: 6rem;
@@ -60,6 +70,14 @@ div.full-wrapper {
         @include mt {
             .header {
                 display: none;
+            }
+        }
+
+        @include md {
+            .header-desktop {
+                .c-navigation {
+                    grid-column-gap: 2rem;
+                }
             }
         }
     }

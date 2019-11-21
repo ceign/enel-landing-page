@@ -13,4 +13,11 @@ div.bubble-decoration {
     @include sd {
         display: block;
     }
+
+    @include md {
+        img {
+            max-width: 650px;
+            top: -4rem;
+        }
+    }
 }

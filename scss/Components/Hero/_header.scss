@@ -15,10 +15,72 @@ header {
         }
     }
 
+    .header-desktop {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
     @include st {
         .header {
             .c-button-download {
                 width: 75%;
+            }
+        }
+    }
+
+    @include mt {
+        .header-desktop {
+            display: block;
+
+            ul {
+                width: auto;
+
+                li.header-desktop--active {
+                    a {
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sd {
+        .header-desktop {
+            ul {
+                width: 100%;
+            }
+        }
+
+        .c-button-download {
+            @include border(2px, $blanco);
+
+            a {
+                .c-button-download__ico {
+                    span {
+                        color: $blanco;
+                    }
+                }
+
+                .c-button-download__text {
+                    color: $blanco;
+                }
+            }
+
+            &:hover {
+                background-color: $blanco;
+
+                a {
+                    .c-button-download__ico {
+                        span {
+                            color: $pink;
+                        }
+                    }
+
+                    .c-button-download__text {
+                        color: $pink;
+                    }
+                }
             }
         }
     }
