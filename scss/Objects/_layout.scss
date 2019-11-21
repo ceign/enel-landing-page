@@ -56,12 +56,36 @@ div.full-wrapper {
                 justify-items: center;
             }
         }
+
+        @include mt {
+            .header {
+                display: none;
+            }
+        }
     }
 
     //Home Info
 
     section.home-info {
         grid-area: home-info;
+
+        @include sd {
+            .home-info__wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 4rem;
+
+                .home-info__text {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+
+                .home-info__cellphone {
+                    grid-column: 2/-1;
+                    grid-row: 1/2;
+                }
+            }
+        }
     }
 
     //Servives

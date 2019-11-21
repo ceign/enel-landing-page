@@ -7,7 +7,6 @@ section.home-info {
         height: 100%;
 
         .home-info__text {
-            padding: 3rem;
 
             h1 {
                 position: relative;
@@ -16,7 +15,7 @@ section.home-info {
                 font-size: 2.125rem;
                 font-weight: 500;
                 line-height: 3.5rem;
-                margin: 0;
+                margin: 3rem;
 
                 span {
                     color: $sky;
@@ -34,13 +33,24 @@ section.home-info {
                     border-radius: 10px;
                 }
             }
+
+            .home-info__button {
+                width: 100%;
+                height: auto;
+                padding: 2rem 0;
+
+                .c-button-cta {
+                    margin: auto;
+                }
+
+                .home-info__stores {
+                    display: none;
+                }
+            }
         }
 
-        .home-info__button {
-            @include flex-align(row, center, center);
-            width: 100%;
-            height: auto;
-            padding: 2rem 0;
+        .home-info__cellphone {
+            display: none;
         }
     }
 
@@ -59,10 +69,70 @@ section.home-info {
     @include st {
         .home-info__wrapper {
             .home-info__text {
-                padding: 6rem 3rem;
+                padding: 6rem 3rem 0;
 
                 h1 {
                     max-width: 440px;
+                    margin: 0;
+                    margin-bottom: 6rem;
+                }
+            }
+        }
+    }
+
+    @include sd {
+        padding-bottom: 5rem;
+
+        .home-info__wrapper {
+            align-items: flex-end;
+
+            .home-info__text {
+                justify-content: center;
+                align-items: flex-end;
+                height: 100%;
+                padding: 8rem 0 5rem 0;
+
+                h1 {
+                    max-width: 410px;
+                    margin-bottom: 0;
+                }
+
+                .home-info__button {
+                    max-width: 410px;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding: 0;
+
+                    .c-button-cta {
+                        margin: 4rem 0 2rem;
+                    }
+
+                    .home-info__stores {
+                        @include flex-align(row, center, center);
+                        width: 300px;
+                        height: auto;
+
+                        img {
+                            width: 42px;
+                            height: 42px;
+                            margin: 0 .8rem;
+                        }
+                    }
+                }
+            }
+
+            .home-info__cellphone {
+                display: block;
+                padding-left: 15%;
+
+                figure {
+                    max-width: 300px;
+                    margin: 0;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
                 }
             }
         }
