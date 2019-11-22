@@ -42,12 +42,32 @@ div.full-wrapper {
         display: grid;
         grid-template-rows: auto;
 
-        .header {
+        .header-mobile {
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
             justify-items: left;
             grid-gap: 1rem;
+        }
+
+        .mobile-navigation {
+            .mobile-navigation__menu {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 20% 10% auto;
+
+                .mobile-navigation__logo {
+                    grid-row: 1/2;
+                }
+
+                .mobile-navigation__rrss {
+                    grid-row: 2/3;
+                }
+
+                .mobile-navigation__list {
+                    grid-row: 3/-1;
+                }
+            }
         }
 
         .header-desktop {
@@ -61,14 +81,14 @@ div.full-wrapper {
         }
 
         @include st {
-            .header {
+            .header-mobile {
                 grid-gap: 6rem;
                 justify-items: center;
             }
         }
 
         @include mt {
-            .header {
+            .header-mobile {
                 display: none;
             }
         }

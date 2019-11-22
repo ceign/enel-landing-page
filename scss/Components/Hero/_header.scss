@@ -3,7 +3,7 @@ header {
     height: auto;
     padding: 2rem;
 
-    .header {
+    .header-mobile {
         width: 100%;
 
         .c-logo {
@@ -12,6 +12,67 @@ header {
 
         .c-button-download {
             width: 100%;
+        }
+    }
+
+    .mobile-navigation {
+        width: 100%;
+        height: auto;
+
+        .mobile-navigation__menu {
+            background-color: $pink;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 3;
+            padding-left: 2.5rem;
+            display: none !important;
+
+            .mobile-navigation__logo {
+                @include flex-align(column, initial, center);
+
+                img {
+                    width: 100px;
+                }
+            }
+
+            .mobile-navigation__rrss {
+                @include flex-align(row, center, center);
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                padding-right: 2.5rem;
+
+                li {
+                    margin: 0 1rem;
+
+                    a {
+                        color: $blanco;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .mobile-navigation__list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                padding-top: 2rem;
+
+                li {
+                    margin-bottom: 1.8rem;
+
+                    a {
+                        font-family: $texto;
+                        color: $blanco;
+                        font-weight: 500;
+                        font-size: 2rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
         }
     }
 
@@ -42,6 +103,10 @@ header {
                     }
                 }
             }
+        }
+
+        .mobile-navigation {
+            display: none;
         }
     }
 
