@@ -1,1 +1,1 @@
-console.log("Gulp it's Work! :)");
+document.getElementById("buttonMobile").onclick=function(){document.getElementById("buttonMobile").classList.toggle("c-button-mobile--active")};
