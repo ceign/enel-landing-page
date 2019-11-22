@@ -1,0 +1,65 @@
+.c-button-mobile {
+    background-color: $pink;
+    position: fixed;
+    bottom: 10%;
+    right: 15%;
+    box-shadow: 0px 1px 4px 2px #00000038;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 5;
+    cursor: pointer;
+
+    span {
+        background-color: $blanco;
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        border-radius: 15px;
+
+        &:first-child {
+            @include transition(.3s all ease-in-out);
+            top: 33%;
+            left: calc(50% - 15px);
+        }
+
+        &:nth-child(2) {
+            @include transition(.2s all ease);
+            top: 48%;
+            left: calc(50% - 10px);
+            width: 25px;
+        }
+
+        &:last-child {
+            @include transition(.3s all ease-in-out);
+            top: 63%;
+            left: calc(50% - 15px);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.c-button-mobile--active {
+        span {
+            &:first-child {
+                top: 48%;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                top: 48%;
+                left: 0%;
+                width: 25px;
+                opacity: 0;
+            }
+
+            &:last-child {
+                top: 48%;
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+}
