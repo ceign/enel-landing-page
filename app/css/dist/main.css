@@ -920,15 +920,17 @@ header {
     width: 100%;
     height: auto; }
     header .mobile-navigation .mobile-navigation__menu {
+      -webkit-transition: left 0.5s ease;
+      -o-transition: left 0.5s ease;
+      transition: left 0.5s ease;
       background-color: #FF0F64;
       position: fixed;
       top: 0;
-      left: 0;
+      left: -100%;
       width: 100%;
       height: 100vh;
       z-index: 3;
-      padding-left: 2.5rem;
-      display: none !important; }
+      padding-left: 2.5rem; }
       header .mobile-navigation .mobile-navigation__menu .mobile-navigation__logo {
         display: -webkit-box;
         display: -webkit-flex;
@@ -989,6 +991,8 @@ header {
             font-weight: 500;
             font-size: 2rem;
             font-size: 1.2rem; }
+    header .mobile-navigation .mobile-navigation__menu--active {
+      left: 0%; }
   header .header-desktop {
     width: 100%;
     height: auto;
