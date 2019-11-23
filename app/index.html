@@ -20,7 +20,7 @@
             <img src="./img/hero-bubble.png" alt="">
         </div>
 
-        <header>
+        <header id="inicio">
             <div class="header-mobile">
                 <div class="c-logo">
                     <a href="#">
@@ -50,7 +50,7 @@
                     <span></span>
                 </div>
 
-                <div class="mobile-navigation__menu">
+                <div id="mobileMenu" class="mobile-navigation__menu">
                     <div class="mobile-navigation__logo">
                         <img src="./img/enel-logo.png" alt="">
                     </div>
@@ -75,22 +75,22 @@
 
                     <ul class="mobile-navigation__list">
                         <li>
-                            <a href="#">
+                            <a href="#inicio" data-smoothie>
                                 Inicio
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#enel-app" data-smoothie>
                                 Enel App
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#alerta-enel" data-smoothie>
                                 Alerta Enel
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#galeria" data-smoothie>
                                 Galería
                             </a>
                         </li>
@@ -108,22 +108,22 @@
 
                     <ul>
                         <li class="header-desktop--active">
-                            <a href="#">
+                            <a href="#inicio" data-smoothie>
                                 Inicio
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#enel-app" data-smoothie>
                                 Enel App
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#alerta-enel" data-smoothie>
                                 Alerta Enel
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#galeria" data-smoothie>
                                 Galería
                             </a>
                         </li>
@@ -241,7 +241,7 @@
             </div>
         </section>
 
-        <section class="app-info">
+        <section id="enel-app" class="app-info">
             <div class="app-info__wrapper">
 
                 <div class="app-info__cellphone">
@@ -292,7 +292,7 @@
             </div>
         </section>
 
-        <section class="alerta-enel">
+        <section id="alerta-enel" class="alerta-enel">
             <div class="alerta-enel__wrapper">
 
                 <div class="alerta-enel__cellphone">
@@ -343,7 +343,7 @@
             </div>
         </section>
 
-        <section class="screens">
+        <section id="galeria" class="screens">
             <div class="screens__title">
                 <h2>
                     Pruebe <span> #Enel App </span>
@@ -543,9 +543,9 @@
 
     </div>
 
-
-    <script src="./js/dist/main.js"></script>
+    <script src="./lib/smoothie/smoothie.min.js"></script>
     <script src="./lib/font-awesome/all.min.js"></script>
+    <script src="./js/dist/main.js"></script>
 
 </body>
 
