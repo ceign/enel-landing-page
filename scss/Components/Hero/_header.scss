@@ -81,9 +81,21 @@ header {
     }
 
     .header-desktop {
+        @include transition(all .5s ease);
+        display: none;
         width: 100%;
         height: auto;
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2rem;
+        z-index: 5;
+
+        .c-navigation {
+            .c-logo {
+                @include transition(width .5s ease);
+            }
+        }
     }
 
     @include st {
@@ -95,15 +107,71 @@ header {
     }
 
     @include mt {
+        padding: 3.5rem;
+
         .header-desktop {
             display: block;
 
             ul {
                 width: auto;
 
-                li.header-desktop--active {
+                li.header-desktop--select {
                     a {
+                        @include transition(font-size .3s ease);
+                        font-size: 1.05rem;
                         font-weight: 900;
+                    }
+                }
+            }
+
+            &.header-desktop--scrolling {
+                background-color: $pink;
+                box-shadow: 0px 1px 0px 0px $blanco;
+                padding: 1rem;
+
+                .c-navigation {
+                    .c-logo {
+                        width: 100px;
+                    }
+                }
+
+                ul {
+                    li {
+                        a {
+                            color: $blanco;
+                        }
+                    }
+                }
+
+                .c-button-download {
+                    @include border(2px, $blanco);
+
+                    a {
+                        .c-button-download__ico {
+                            span {
+                                color: $blanco;
+                            }
+                        }
+
+                        .c-button-download__text {
+                            color: $blanco;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $blanco;
+
+                        a {
+                            .c-button-download__ico {
+                                span {
+                                    color: $pink;
+                                }
+                            }
+
+                            .c-button-download__text {
+                                color: $pink;
+                            }
+                        }
                     }
                 }
             }
