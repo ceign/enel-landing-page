@@ -38,27 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
         var itemLista = document.querySelectorAll(".header-desktop ul li");
         var item = Array.from(itemLista);
 
-        if (posVertical < 1420) {
+        if (posVertical < 1340) {
             item[0].classList.add("header-desktop--select");
             item[1].classList.remove("header-desktop--select");
             item[2].classList.remove("header-desktop--select");
             item[3].classList.remove("header-desktop--select");
 
-        } else if (posVertical > 1430 && posVertical < 2100) {
+        } else if (posVertical > 1340 && posVertical < 2100) {
 
             item[0].classList.remove("header-desktop--select");
             item[1].classList.add("header-desktop--select");
             item[2].classList.remove("header-desktop--select");
             item[3].classList.remove("header-desktop--select");
 
-        } else if (posVertical > 2100 && posVertical < 3700) {
+        } else if (posVertical > 2100 && posVertical < 3600) {
 
             item[0].classList.remove("header-desktop--select");
             item[1].classList.remove("header-desktop--select");
             item[2].classList.add("header-desktop--select");
             item[3].classList.remove("header-desktop--select");
 
-        } else if (posVertical > 3700 && posVertical < 6000) {
+        } else if (posVertical > 3600 && posVertical < 6000) {
 
             item[0].classList.remove("header-desktop--select");
             item[1].classList.remove("header-desktop--select");
