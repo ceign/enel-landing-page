@@ -42,7 +42,7 @@ section.screens {
 
             &::before {
                 @include pseudo();
-                background-image: url(/img/iphone-xr-mockup.png);
+                background-image: url(/img/webp/alerta-xr-mockup.webp);
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 left: -3rem;
@@ -54,7 +54,7 @@ section.screens {
 
             &::after {
                 @include pseudo();
-                background-image: url(/img/iphone-xr-mockup.png);
+                background-image: url(/img/webp/graficos-xr-mockup.webp);
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 right: -3rem;
