@@ -11,10 +11,10 @@ gulp.task('sass', async function () {
     return gulp.src('scss/*.scss')
 
         .pipe(sass().on('error', sass.logError))
-        //.pipe(cssnano())
+        .pipe(cssnano())
         .pipe(autoprefixer({
             browsers: ['last 10 versions'],
-            cascade: true
+            cascade: false
         }))
         .pipe(gulp.dest('app/css/dist/'))
         .pipe(browserSync.stream());
