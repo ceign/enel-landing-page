@@ -1,43 +1,63 @@
 .c-button-download {
-    @include border(2px, $pink);
-    border-radius: 4px;
-    width: 175px;
-    height: 50px;
-    cursor: pointer;
+  @include border(2px, $pink);
+  border-radius: 4px;
+  width: 175px;
+  height: 50px;
+  cursor: pointer;
 
+  a {
+    @include flex-align(row, center, center);
+    width: 100%;
+    height: 100%;
+
+    .c-button-download__text {
+      font-family: $texto;
+      color: $pink;
+      position: relative;
+      margin: 0;
+      margin-left: 20px;
+      font-weight: 500;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/img/ico/download.svg");
+        left: -26px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $pink;
+
+    .c-button-download__text {
+      color: $blanco;
+
+      &::before {
+        background-image: url("/img/ico/download-white.svg");
+      }
+    }
+  }
+}
+
+@include sd {
+  .c-button-download {
     a {
-        @include flex-align(row, center, center);
-        width: 100%;
-        height: 100%;
-
-        .c-button-download__ico {
-            span {
-                color: $pink;
-                font-size: 1rem;
-            }
+      .c-button-download__text {
+        &::before {
+          background-image: url("/img/ico/download-white.svg");
         }
+      }
 
+      &:hover {
         .c-button-download__text {
-            font-family: $texto;
-            color: $pink;
-            margin: 0;
-            margin-left: 10px;
-            font-weight: 500;
+          &::before {
+            background-image: url("/img/ico/download.svg");
+          }
         }
+      }
     }
-
-    &:hover {
-        background-color: $pink;
-
-        .c-button-download__text {
-            color: $blanco;
-        }
-
-        .c-button-download__ico {
-            span {
-                color: $blanco;
-                font-size: 1rem;
-            }
-        }
-    }
+  }
 }

@@ -1,29 +1,32 @@
 .c-button-cta {
-    background-color: $pink;
-    border-radius: 4px;
-    width: 300px;
-    height: 64px;
-    cursor: pointer;
+  background-color: $pink;
+  border-radius: 4px;
+  width: 300px;
+  height: 64px;
+  cursor: pointer;
 
-    a {
-        @include flex-align(row, center, center);
-        width: 100%;
-        height: 100%;
+  a {
+    @include flex-align(row, center, center);
+    width: 100%;
+    height: 100%;
 
-        .c-button-cta__ico {
-            span {
-                color: $blanco;
-                font-size: 1.25rem;
-            }
-        }
+    .c-button-cta__ico {
+      width: 23px;
+      height: 23px;
 
-        .c-button-cta__text {
-            color: $blanco;
-            font-family: $texto;
-            margin: 0;
-            margin-left: 20px;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
+      img {
+          width: 100%;
+          height: 100%;
+      }
     }
+
+    .c-button-cta__text {
+      color: $blanco;
+      font-family: $texto;
+      margin: 0;
+      margin-left: 20px;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
 }
